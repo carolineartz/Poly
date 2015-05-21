@@ -3,8 +3,8 @@
   %head
     %title Poly UI Kit
     %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}
-      %link{:href => "css/application.css", :rel => "stylesheet"}
-        %link{:href => "img/favicon.png", :rel => "shortcut icon"}
+    %link{:href => "css/application.css", :rel => "stylesheet"}
+    %link{:href => "img/favicon.png", :rel => "shortcut icon"}
   %body
     .grid
       %header.grid__col--12.panel--padded--centered{:role => "banner"}
@@ -55,22 +55,27 @@
     .grid
       .grid__col--7
         %form.form
-          %label.form__label--hidden{:for => "name"} Name:
-          %input#name.form__input{:placeholder => "Name", :type => "text"}
-            %label.form__label--hidden{:for => "email"} Email:
-            %input#email.form__input{:placeholder => "email@website.com", :type => "email"}
-              %label.form__label--hidden{:for => "msg"} Message:
-              %textarea#msg.form__input{:placeholder => "Message...", :rows => "7"}
-              %input.btn--default{:type => "submit", :value => "Submit"}
-                %input.btn--warning{:type => "reset", :value => "Reset"}
+          %div.fieldset
+            %label.form__label{:for => "name"} Name:
+            %input#name.form__input{:type => "text"}
+          %div.fieldset
+            %label.form__label{:for => "email"} Email:
+            %input#email.form__input{:type => "email"}
+          %div.fieldset
+            %label.form__label{:for => "msg"} Message:
+            %textarea#msg.form__input{:rows => "7"}
+          %input.btn--default{:type => "submit", :value => "Submit"}
+          %input.btn--warning{:type => "reset", :value => "Reset"}
       .grid__col--4
         %img.img--avatar{:alt => "Avatar", :src => "img/avatar.png"}
-          %form
-            %label.form__label--hidden{:for => "username"} Username:
-            %input#username.form__input{:placeholder => "Username", :type => "text"}
-              %label.form__label--hidden{:for => "password"} Password:
-              %input#password.form__input{:placeholder => "Password", :type => "password"}
-                %input.form__btn{:type => "submit", :value => "Login"}
+          %form.form
+            %div.fieldset
+              %label.form__label{:for => "username"} Username:
+              %input#username.form__input{:type => "text"}
+            %div.fieldset
+              %label.form__label{:for => "password"} Password:
+              %input#password.form__input{:type => "password"}
+            %input.form__btn{:type => "submit", :value => "Login"}
     %h4#progbars.grid Progress Bars
     .grid
       .grid__col--12
@@ -143,8 +148,17 @@
         %a.site-logo{:href => "#"}
           %b.srt Poly - UI Toolkit
         %p A simple UI Kit for everyone to share and enjoy.
-    %script{:src => "http://code.jquery.com/jquery-2.1.1.min.js"}
+    %script{:src => "http://code.jquery.com/jquery-2.1.3.min.js"}
     :javascript
       $('#toggle').click(function() {
         $(this).next('.nav').toggleClass("is-collapsed-mobile");
       });
+      $(".form__input").focus(function(){
+        $(this).parent().addClass("is-active is-completed");
+      });
+
+      $(".form__input").focusout(function(){
+        if($(this).val() === "")
+          $(this).parent().removeClass("is-completed");
+        $(this).parent().removeClass("is-active");
+      })

@@ -3,30 +3,61 @@
 // ==========================================================================
 
 .form {
-	@include e(label) {
-		@include m(hidden) {
-			@extend .srt;
-		}
-		display: block;
-		margin-bottom: em(10px);
-	}
+  @include e(label) {
+    display: block;
+    font-size: 16px;
+    transform: translateY(25px);
+    color: palette(grey, dark);
+    transition: all 0.5s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    font-size: 0.875em;
+  }
 
-	@include e(input) {
-		font-size : em(18px);
-		margin-bottom: em(20px, 18px);
-		border-bottom: 2px solid palette(grey, x-light);
-		border-radius: $br--default;
-		background: palette(grey, xx-light);
-		color: palette(black, dark);
-		font-weight: $font-weight--light;
+  @include e(input) {
+    position: relative;
+    background: transparent;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 8px 0;
+    font-size: 16px;
+  }
 
-		&:focus {	
-			border-color: $color-primary;
-		}
-	}
-
-	@include e(btn) {
-		@extend %btn;
-		background: $color-primary;
-	}
+  .fieldset {
+    padding: 30px 0 0 0;
+    position: relative;
+    &::before, &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: palette(grey, light);
+      bottom: 0;
+      left: 0;
+      transition: all 0.5s;
+    }
+    &::after {
+      transform: scaleX(0);
+    }
+    &.is-active {
+      &::after {
+        transform: scaleX(1);
+      }
+    }
+    &.is-completed label {
+      font-size: 12px;
+      transform: translateY(0);
+    }
+    &:last-of-type {
+      margin-bottom: 30px;
+    }
+  }
+  @include e(btn) {
+    @extend %btn;
+    margin-top: 30px;
+    background: $color-primary;
+  }
 }

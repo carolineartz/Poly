@@ -1,5 +1,5 @@
 "use strict";
-var $, gulp, haml, handleError, options, path, sass, connect;
+var $, gulp, haml, handleError, sass, connect;
 
 handleError = function(err) {
     console.warn(err);
@@ -7,7 +7,6 @@ handleError = function(err) {
 };
 
 gulp = require("gulp");
-path = require("path");
 sass = require('gulp-ruby-sass');
 haml = require('gulp-haml-coffee');
 connect = require('gulp-connect')
