@@ -373,7 +373,7 @@ footer {
 
 .nav__item--current a, .nav__item a:hover {
   color: #0b0b0b;
-  border-color: #52bab3; }
+  border-color: #1E2329; }
 
 h1, .headline-primary, .headline-primary--grouped {
   color: #525559;
@@ -410,7 +410,7 @@ h2, .headline-secondary, .headline-secondary--grouped {
   padding-bottom: 1em;
   color: #fff;
   text-align: center;
-  text-shadow: 0 1px rgba(11, 11, 11, 0.2);
+  text-shadow: 0 1px rgba(30, 35, 41, 0.2);
   font-size: 1.125em; }
 
 .icn--nav-toggle, .icn--close {
@@ -484,18 +484,18 @@ h2, .headline-secondary, .headline-secondary--grouped {
     margin-bottom: 30px; }
 .form__btn {
   margin-top: 30px;
-  background: #52bab3; }
+  background: #1E2329; }
 
 .btn--default {
-  background-color: #52bab3; }
+  background-color: #1E2329; }
 .btn--success {
-  background-color: #5ece7f; }
+  background-color: #8CC6CF; }
 .btn--error {
   background-color: #e67478; }
 .btn--warning {
-  background-color: #ff784f; }
+  background-color: #FFAD69; }
 .btn--info {
-  background-color: #9279c3; }
+  background-color: #63768D; }
 
 [class^="btn--"] {
   margin-bottom: 1.42857em; }
@@ -526,8 +526,8 @@ h2, .headline-secondary, .headline-secondary--grouped {
   position: relative;
   padding: 0.625em;
   letter-spacing: 1px;
-  background: #39add1;
-  background: linear-gradient(45deg, rgba(94, 206, 127, 0.8) 0%, #39add1 100%); }
+  background: #8CC6CF;
+  background: linear-gradient(45deg, rgba(235, 185, 167, 0.8) 0%, #8CC6CF 100%); }
 
 .menu {
   margin-top: 1.25em; }
@@ -541,25 +541,25 @@ h2, .headline-secondary, .headline-secondary--grouped {
   position: relative;
   margin-bottom: 2.875em; }
   .progbar__status--default {
-    background-color: #52bab3; }
+    background-color: #1E2329; }
     .progbar__status--default:after {
-      background-color: #6fc6c0; }
+      background-color: #2f3741; }
   .progbar__status--success {
-    background-color: #5ece7f; }
+    background-color: #8CC6CF; }
     .progbar__status--success:after {
-      background-color: #7dd898; }
+      background-color: #a9d4db; }
   .progbar__status--error {
     background-color: #e67478; }
     .progbar__status--error:after {
       background-color: #ec979a; }
   .progbar__status--warning {
-    background-color: #ff784f; }
+    background-color: #FFAD69; }
     .progbar__status--warning:after {
-      background-color: #ff9778; }
+      background-color: #ffc392; }
   .progbar__status--info {
-    background-color: #9279c3; }
+    background-color: #63768D; }
     .progbar__status--info:after {
-      background-color: #a995d0; }
+      background-color: #788aa0; }
 
 [class^="progbar__"] {
   display: block;

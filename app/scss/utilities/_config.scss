@@ -29,12 +29,23 @@ $coral          : #ff784f;
 $purple-majesty : #9279c3;
 $scooter        : #39add1;
 
+$black-pearl    : #1E2329;
+$ghost          : #C6BCC8;
+$shilo          : #EBB9A7;
+$narvik         : #EFF9F0;
+$ship-cove      : #788AA3;
+
+$tan            : #FFAD69;
+$hoki           : #63768D;
+
+$half-baked     : #8CC6CF;
+
 // Color Usage
 
-$color-primary   : $fountain-blue;
-$color-secondary : $scooter;
-$color-accent    : $emerald;
-$color-shadow    : rgba($black, .2);
+$color-primary   : $black-pearl;
+$color-secondary : $half-baked;
+$color-accent    : $shilo;
+$color-shadow    : rgba($black-pearl, .2);
 
 // Color Palette Modifiers
 
@@ -56,12 +67,20 @@ $color-palettes: (
 
 // UI Colors
 
+// $ui-colors: (
+//   default : $fountain-blue,
+//   success : $emerald,
+//   error   : $sunglo,
+//   warning : $coral,
+//   info    : $purple-majesty
+// );
+
 $ui-colors: (
-  default : $fountain-blue,
-  success : $emerald,
+  default : $black-pearl,
+  success : $half-baked,
   error   : $sunglo,
-  warning : $coral,
-  info    : $purple-majesty
+  warning : $tan,
+  info    : $hoki
 );
 
 // Text
