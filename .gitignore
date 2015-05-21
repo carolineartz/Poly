@@ -1,4 +1,7 @@
-.node_modules
-.sass-cache/*
+node_modules
+.tmp
 .sass-cache
-*.scssc
+bower_components
+test/bower_components
+/.sass-cache/
+.DS_Store
